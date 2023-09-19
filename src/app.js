@@ -20,6 +20,7 @@ const connection = mongoose.connect(process.env.MONGO_URL)
 
 app.use(express.json())
 app.use(cookieParser())
+app.use(express.static(__dirname+'/public'))
 // console.log(`${__dirname}/docs/**/*.yaml`)
 const swaggerOptions = {
     definition: {
